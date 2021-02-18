@@ -1,6 +1,7 @@
 //import { changeBackground } from "./TicTacToe.js";
 
 //changeBackground();
+console.log("V.1")
 
 class myGame {
   constructor() {
@@ -215,9 +216,9 @@ function display() {
   playerTurn.innerHTML = tempTurn;
 };
 
-function computerMove(){
-const boardCells= document.querySelectorAll(".cell")
-}
+//function computerMove(){
+//onst boardCells= document.querySelectorAll(".cell");
+//}
 //i need to have board cells
 //i have to check if and which cells are empty(no mark x or o)
 //when find an empty cell computer must mark the cell with the its mark sign O
