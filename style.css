@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+body {
+  background-color: #fff;
+  background: linear-gradient(-45deg,#fff,ivory,floralwhite,rgba(0, 255, 221, 0.075));
+  background-size: 200% 200% ;
+  opacity:0.8;
+  
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ ;
+}
+/*rgba(255, 0, 255, 0.121)*/
+
+.players {
+ 
+  width: 58%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+.playerturn{
+  display: flex;
+  justify-self:center;
+  align-self: center;
+  text-align: center;
+  color: brown;
+  font-style: italic;
+  font-weight: normal;
+}
+.scoretracker {
+  border-radius: 10%;
+  box-shadow: 5px 3px rgb(235, 184, 184);
+  border: 0.2px rgb(209, 125, 125);
+  border-top:1px solid white;
+  width: 40%;
+  height: 30px;
+  font-style: italic;
+  color: brown;
+  font-weight:bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 170px 170px 170px;
+  grid-template-rows: 170px 170px 170px;
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+  justify-content: center;
+  position: relative;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgb(209, 125, 125);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.cell:hover{
+  background: linen;
+
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+.cell:nth-child(3n + 3) {
+  border-right: none;
+}
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+  border-bottom: none;
+}
+
+/*.color-overlay {
+  width: 100%;
+  height: 100vh;
+  opacity: 1%;
+  color: #fff;
+}*/
+
+.cell.X::before,
+.cell.X::after {
+  position: absolute;
+  content: "";
+  width: 12%;
+  height: 90%;
+  background-color:rgb(236, 117, 117);
+}
+.cell.X::before {
+  transform: rotate(45deg);
+}
+.cell.X::after {
+  transform: rotate(-45deg);
+}
+
+.cell.O::before,
+.cell.O::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+}
+
+.cell.O::before {
+  width: 90%;
+  height: 90%;
+  background-color:#cf903d76;
+}
+.cell.O::after {
+  width: 65%;
+  height: 65%;
+  background-color:ivory;
+}
+.cell.X,
+.cell.O{
+  cursor: not-allowed;
+}
+
+/*#restart,
+#newGame {
+ /* padding: 15px;
+  height: 30px;
+  width: 180px;
+  border-radius: 35%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*
+/*.restartReset {
+  width: 58%;
+  display: flex;
+  justify-content: space-evenly;
+}*/
+#pop-up{
+  background-color:ivory;
+  border-radius: 20%;
+  margin-top: 80px;
+  width: 70%;
+  height: 90%;
+  border: 3px solid lightcoral;
+  position:fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  z-index:1;
+
+}
+
+#pop-up.hidden {
+  display:none;
+}
+#text{
+  color: #cf903d76;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-size:120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  text-align: center;
+  
+}
+.btn{
+width: 140px;
+height: 50px;
+box-shadow: 7px 5px gainsboro;
+background-color: honeydew;
+color: brown;
+border: ivory 1px dotted;
+font-style: oblique;
+border-radius: 5%;
+cursor: pointer;
+}
+.btn:hover{
+  background-color: lightcoral;
+  color: aqua;
+}
